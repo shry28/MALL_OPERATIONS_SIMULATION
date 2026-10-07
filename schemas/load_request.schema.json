@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Day Load Request",
+  "description": "Request body for POST /api/v1/day/load",
+  "type": "object",
+  "required": ["day_id", "items", "events"],
+  "properties": {
+    "day_id": {
+      "type": "string",
+      "description": "Unique day identifier"
+    },
+    "items": {
+      "type": "array",
+      "description": "All item definitions for this day",
+      "items": {
+        "type": "object",
+        "required": ["item_id", "name", "category", "unit_price_paise", "initial_shelf_qty", "refill_cost_per_unit_paise", "online_pull_cost_per_unit_paise"],
+        "properties": {
+          "item_id": { "type": "string" },
+          "name": { "type": "string" },
+          "category": { "type": "string" },
+          "unit_price_paise": { "type": "integer", "minimum": 1 },
+          "initial_shelf_qty": { "type": "integer", "minimum": 1 },
+          "refill_cost_per_unit_paise": { "type": "integer", "minimum": 1 },
+          "online_pull_cost_per_unit_paise": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "description": "All events for the day, in seq order",
+      "items": { "$ref": "event.schema.json" }
+    }
+  }
+}

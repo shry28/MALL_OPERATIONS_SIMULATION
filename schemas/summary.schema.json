@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Day Summary",
+  "description": "Response body for GET /api/v1/day/:day_id/summary",
+  "type": "object",
+  "required": ["day_id", "status", "events_processed", "events_total", "totals", "baseline", "savings_vs_baseline", "items"],
+  "properties": {
+    "day_id": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["idle", "ready", "running", "finished"]
+    },
+    "events_processed": { "type": "integer", "minimum": 0 },
+    "events_total": { "type": "integer", "minimum": 0 },
+    "totals": {
+      "type": "object",
+      "required": [
+        "refill_cost", "online_pull_cost", "lost_revenue", "total_cost",
+        "refill_count", "units_lost", "units_pulled_from_inventory",
+        "walk_in_revenue_captured", "online_revenue", "gross_revenue"
+      ],
+      "properties": {
+        "refill_cost": { "type": "integer" },
+        "online_pull_cost": { "type": "integer" },
+        "lost_revenue": { "type": "integer" },
+        "total_cost": { "type": "integer" },
+        "refill_count": { "type": "integer" },
+        "units_lost": { "type": "integer" },
+        "units_pulled_from_inventory": { "type": "integer" },
+        "walk_in_revenue_captured": { "type": "integer" },
+        "online_revenue": { "type": "integer" },
+        "gross_revenue": { "type": "integer" }
+      }
+    },
+    "baseline": {
+      "type": "object",
+      "required": ["shelf_first_cost", "inventory_only_cost", "total_cost"],
+      "properties": {
+        "shelf_first_cost": { "type": "integer" },
+        "inventory_only_cost": { "type": "integer" },
+        "total_cost": { "type": "integer" }
+      }
+    },
+    "savings_vs_baseline": { "type": "integer" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item_id", "shelf_qty", "refill_count", "units_lost", "lost_revenue", "units_pulled", "pull_cost", "refill_cost"],
+        "properties": {
+          "item_id": { "type": "string" },
+          "shelf_qty": { "type": "integer" },
+          "refill_count": { "type": "integer" },
+          "units_lost": { "type": "integer" },
+          "lost_revenue": { "type": "integer" },
+          "units_pulled": { "type": "integer" },
+          "pull_cost": { "type": "integer" },
+          "refill_cost": { "type": "integer" }
+        }
+      }
+    }
+  }
+}

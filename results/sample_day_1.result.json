@@ -1,0 +1,24 @@
+{
+  "day_id": "sample_day_1",
+  "status": "completed",
+  "events_processed": 30000,
+  "events_total": 30000,
+  "totals": {
+    "refill_cost": 777272500,
+    "refill_count": 7917,
+    "online_pull_cost": 177687600,
+    "lost_revenue": 18324800,
+    "total_cost": 973284900,
+    "units_lost": 102,
+    "units_pulled_from_inventory": 32082,
+    "walk_in_revenue_captured": 7979089500,
+    "online_revenue": 14161650900,
+    "gross_revenue": 22140740400,
+    "clamped_lines": 0
+  },
+  "failures": 0,
+  "clamped_lines": 0,
+  "day_score": 100.0,
+  "baseline_total_cost": 2485934450,
+  "reference_optimal_cost": 973284900
+}

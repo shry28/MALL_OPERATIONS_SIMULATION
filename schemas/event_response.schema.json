@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Event Response",
+  "description": "Response body for POST /api/v1/day/events",
+  "oneOf": [
+    {
+      "title": "Walk-in Response",
+      "type": "object",
+      "required": ["seq", "type", "status"],
+      "properties": {
+        "seq": { "type": "integer" },
+        "type": { "const": "walk_in" },
+        "status": { "const": "ok" }
+      }
+    },
+    {
+      "title": "Online Response",
+      "type": "object",
+      "required": ["seq", "type", "lines"],
+      "properties": {
+        "seq": { "type": "integer" },
+        "type": { "const": "online" },
+        "lines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["item_id", "from_shelf"],
+            "properties": {
+              "item_id": { "type": "string" },
+              "from_shelf": { "type": "integer", "minimum": 0 }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

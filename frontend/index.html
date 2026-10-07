@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mall Operations | Control Room</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="brand-mark">M</span><div><b>Mall Operations</b><small>Owner control room</small></div></div><div class="right-head"><span class="live-dot"></span><span id="connection">Connecting</span><span class="date-pill">TRADING DAY</span></div></header>
+  <main>
+    <section class="page-head"><div><p class="eyebrow">OPERATIONS OVERVIEW</p><h1>Trading performance</h1><p class="sub">Real-time view of inventory, fulfilment cost and walk-in demand.</p></div><div class="day-chip"><span class="muted">DAY</span><strong data-testid="day-id" id="day-id">—</strong><span class="status" data-testid="run-status" id="run-status">idle</span></div></section>
+    <section class="panel upload-panel" aria-labelledby="upload-title"><div class="upload-copy"><p class="eyebrow">LOAD A SCENARIO</p><h2 id="upload-title">Upload files and run the day</h2><p class="sub">Choose an item catalog CSV and a day events JSON. The dashboard updates as the simulation replays.</p></div><div class="upload-grid"><label class="upload-field"><span>Item catalog <small>CSV</small></span><input id="items-file" data-testid="items-file" type="file" accept=".csv,text/csv"></label><label class="upload-field"><span>Trading day <small>JSON</small></span><input id="day-file" data-testid="day-file" type="file" accept=".json,application/json"></label><button id="load-replay" class="primary-button" type="button" disabled>Load and replay</button></div><p id="upload-status" class="upload-status" role="status" aria-live="polite">Select both files to begin.</p></section>
+    <section class="progress-row"><div class="progress-label"><span>Replay progress</span><b id="progress-text">0%</b></div><div class="progress-track"><div id="progress-bar"></div></div><span data-testid="progress" data-value="0" id="progress" class="sr-only">0%</span></section>
+    <section class="kpis" id="kpis"></section>
+    <section class="grid-main">
+      <article class="panel chart-panel"><div class="panel-head"><div><p class="eyebrow">COST TRACKER</p><h2>Cumulative cost</h2></div><div class="legend"><span><i class="legend-you"></i>Your policy</span><span><i class="legend-base"></i>Best baseline</span></div></div><canvas id="cost-chart" data-testid="cost-chart" height="250"></canvas></article>
+      <article class="panel feed-panel"><div class="panel-head"><div><p class="eyebrow">LIVE LEDGER</p><h2>Event feed</h2></div><span id="feed-count" class="muted">Latest events</span></div><div id="event-feed" data-testid="event-feed" class="feed"><div class="empty">Events will appear here during replay.</div></div><div class="feed-controls"><button id="older">Older events</button><button id="newer" disabled>Newer</button><span id="feed-page"></span></div></article>
+    </section>
+    <section class="grid-bottom">
+      <article class="panel items-panel"><div class="panel-head"><div><p class="eyebrow">INVENTORY</p><h2>Item performance</h2></div><span id="item-count" class="count-tag">0 items</span></div><div class="table-tools"><input data-testid="item-search" id="item-search" type="search" placeholder="Search item or ID"><button data-testid="sort-lost" id="sort-lost">Lost revenue <span>↓</span></button></div><div class="table-wrap"><table data-testid="items-table"><thead><tr><th>Item</th><th>Shelf now</th><th>Lost revenue</th><th>Refills</th><th>Inventory pulled</th></tr></thead><tbody id="item-rows"></tbody></table></div></article>
+      <article class="panel history-panel"><div class="panel-head"><div><p class="eyebrow">ARCHIVE</p><h2>Trading history</h2></div><span class="count-tag" id="history-count">0 days</span></div><div class="table-wrap"><table data-testid="history-table"><thead><tr><th>Day</th><th>Total cost</th><th>Lost revenue</th><th>vs baseline</th></tr></thead><tbody id="history-rows"><tr><td colspan="4" class="empty">No simulated days yet.</td></tr></tbody></table></div></article>
+    </section>
+    <footer>All monetary values are tracked in paise. Historical results are stored locally in the operations database.</footer>
+  </main><script src="/app.js"></script>
+</body></html>

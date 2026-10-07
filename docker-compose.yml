@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: ./backend
+    environment:
+      DB_PATH: ${DB_PATH:-/data/mall.sqlite3}
+      ITEMS_PATH: /app/data/items.csv
+      DAY_PATH: /app/days/sample_day_1.json
+    volumes:
+      - mall-data:/data
+      - ./data:/app/data:ro
+      - ./days:/app/days:ro
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+  dashboard:
+    build: ./frontend
+    ports:
+      - "${DASHBOARD_PORT:-3000}:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+volumes:
+  mall-data:

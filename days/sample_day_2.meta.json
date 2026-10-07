@@ -1,0 +1,10 @@
+{
+  "day_id": "sample_day_2",
+  "event_count": 35000,
+  "walk_in_events": 22740,
+  "online_events": 12260,
+  "baseline_shelf_first_cost": 4431194650,
+  "baseline_inventory_only_cost": 8091300900,
+  "baseline_total_cost": 4431194650,
+  "reference_optimal_cost": 1353975950
+}

@@ -1,0 +1,51 @@
+item_id,name,category,unit_price_paise,initial_shelf_qty,refill_cost_per_unit_paise,online_pull_cost_per_unit_paise
+I001,Basmati Rice 5kg,Grocery,64900,60,2500,4200
+I002,Toothpaste 150g,Personal Care,9500,120,400,700
+I003,USB-C Cable 1m,Electronics,24900,40,900,1500
+I004,Olive Oil 1L,Grocery,55000,45,2200,3800
+I005,Hand Wash 250ml,Personal Care,12900,100,500,900
+I006,Wireless Mouse,Electronics,79900,30,3200,5400
+I007,Whole Wheat Flour 10kg,Grocery,42000,80,1800,3000
+I008,Shampoo 400ml,Personal Care,34900,90,1400,2400
+I009,HDMI Cable 2m,Electronics,19900,50,800,1300
+I010,Sunflower Oil 5L,Grocery,72000,55,2900,4900
+I011,Body Lotion 200ml,Personal Care,21900,85,900,1500
+I012,Bluetooth Speaker,Electronics,149900,20,6000,10000
+I013,Masoor Dal 2kg,Grocery,18500,70,750,1200
+I014,Face Wash 100ml,Personal Care,15900,110,650,1100
+I015,Power Bank 10000mAh,Electronics,99900,25,4000,6800
+I016,Sugar 5kg,Grocery,27500,65,1100,1900
+I017,Deodorant 150ml,Personal Care,19900,95,800,1400
+I018,Laptop Stand,Electronics,129900,22,5200,8800
+I019,Peanut Butter 500g,Grocery,32000,50,1300,2200
+I020,Toothbrush Pack,Personal Care,8900,130,350,600
+I021,Screen Protector,Electronics,14900,60,600,1000
+I022,Green Tea 100 bags,Grocery,29900,55,1200,2000
+I023,Sunscreen SPF50,Personal Care,45000,75,1800,3100
+I024,Earphones Wired,Electronics,39900,35,1600,2700
+I025,Instant Noodles 12pk,Grocery,24000,90,1000,1700
+I026,Hair Oil 200ml,Personal Care,17500,100,700,1200
+I027,Phone Case Universal,Electronics,9900,80,400,700
+I028,Ghee 1kg,Grocery,58000,40,2300,3900
+I029,Razor Cartridge 4pk,Personal Care,54900,60,2200,3700
+I030,Keyboard Mechanical,Electronics,249900,20,10000,17000
+I031,Coffee Powder 500g,Grocery,47000,50,1900,3200
+I032,Wet Wipes 80ct,Personal Care,13500,100,550,950
+I033,USB Hub 4-Port,Electronics,34900,30,1400,2400
+I034,Honey 500g,Grocery,35000,45,1400,2400
+I035,Cotton T-Shirt,Fashion,49900,40,2000,3400
+I036,Running Shoes,Fashion,299900,20,12000,20000
+I037,Denim Jeans,Fashion,179900,25,7200,12200
+I038,Yoga Mat 6mm,Sports,89900,30,3600,6100
+I039,Water Bottle 1L Steel,Sports,59900,45,2400,4100
+I040,Skipping Rope,Sports,29900,55,1200,2000
+I041,LED Desk Lamp,Home,119900,25,4800,8100
+I042,Bath Towel Set,Home,69900,35,2800,4700
+I043,Pillow Memory Foam,Home,149900,20,6000,10200
+I044,Cutting Board Bamboo,Home,39900,50,1600,2700
+I045,Spice Box Steel,Home,44900,40,1800,3100
+I046,Notebook A4 Pack,Stationery,19900,100,800,1400
+I047,Ballpoint Pen 10pk,Stationery,9900,120,400,700
+I048,Highlighter Set 6,Stationery,14900,90,600,1000
+I049,Dark Chocolate 100g,Grocery,22000,70,900,1500
+I050,Hand Sanitizer 500ml,Personal Care,27900,80,1100,1900

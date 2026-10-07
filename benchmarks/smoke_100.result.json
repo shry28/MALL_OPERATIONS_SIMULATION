@@ -1,0 +1,21 @@
+{
+  "day_id": "smoke_100",
+  "status": "completed",
+  "events_processed": 100,
+  "events_total": 100,
+  "totals": {
+    "refill_cost": 422000,
+    "refill_count": 5,
+    "online_pull_cost": 420400,
+    "lost_revenue": 1199200,
+    "total_cost": 2041600,
+    "units_lost": 8,
+    "units_pulled_from_inventory": 64,
+    "walk_in_revenue_captured": 24144500,
+    "online_revenue": 32955100,
+    "gross_revenue": 57099600,
+    "clamped_lines": 0
+  },
+  "failures": 0,
+  "clamped_lines": 0
+}

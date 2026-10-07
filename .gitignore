@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+backend/*.sqlite3*
+.env
+MALL_TASK_SPEC.md
+README_TEMPLATE.md
