@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: backend
+    runtime: docker
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    plan: free
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: DB_PATH
+        value: "/data/mall.sqlite3"
+
+  - type: web
+    name: frontend
+    runtime: docker
+    dockerContext: ./frontend
+    dockerfilePath: ./frontend/Dockerfile
+    plan: free
+    envVars:
+      - key: PORT
+        value: "3000"
